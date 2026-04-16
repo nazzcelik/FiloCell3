@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <defs>
+    <filter id="pinShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="rgba(0,20,80,0.4)"/>
+    </filter>
+    <radialGradient id="pinGrad" cx="45%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1a3dbf"/>
+    </radialGradient>
+    <clipPath id="pinClip">
+      <path d="M100 8 C52 8, 14 48, 14 96 C14 130 30 158 55 181 L100 232 L145 181 C170 158 186 130 186 96 C186 48 148 8 100 8Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Pin outer shape -->
+  <path d="M100 8 C52 8, 14 48, 14 96 C14 130 30 158 55 181 L100 232 L145 181 C170 158 186 130 186 96 C186 48 148 8 100 8Z"
+        fill="url(#pinGrad)" filter="url(#pinShadow)"/>
+
+  <!-- Inner highlight circle at top -->
+  <ellipse cx="98" cy="88" rx="68" ry="68" fill="#1e4fd8" clip-path="url(#pinClip)"/>
+
+  <!-- Yellow swoosh - main crescent -->
+  <path d="M38 52 Q62 22, 110 34 Q148 44, 150 78 Q140 58, 112 52 Q80 44, 58 62 Q48 68, 38 52Z"
+        fill="#FFC72C"/>
+
+  <!-- Yellow swoosh tail -->
+  <path d="M36 66 Q80 48, 152 82 Q148 92, 140 90 Q90 68, 36 80Z"
+        fill="#FFC72C" opacity="0.55"/>
+
+  <!-- Car silhouette - front view, dark navy -->
+  <g transform="translate(100, 152)" clip-path="url(#pinClip)">
+    <!-- Roof / cabin -->
+    <path d="M-28,-38 Q-22,-54, 0,-56 Q22,-54, 28,-38Z" fill="#0d1d4f"/>
+    <!-- Body -->
+    <rect x="-46" y="-38" width="92" height="42" rx="6" fill="#0d1d4f"/>
+    <!-- Windshield -->
+    <path d="M-24,-38 Q-18,-52, 0,-53 Q18,-52, 24,-38Z" fill="#1e3a8a" opacity="0.7"/>
+    <!-- Front bumper -->
+    <rect x="-46" y="4" width="92" height="10" rx="4" fill="#0d1d4f"/>
+    <!-- Left headlight -->
+    <rect x="-44" y="-20" width="18" height="10" rx="3" fill="#FFC72C"/>
+    <!-- Right headlight -->
+    <rect x="26" y="-20" width="18" height="10" rx="3" fill="#FFC72C"/>
+    <!-- Grille -->
+    <rect x="-16" y="-8" width="32" height="10" rx="4" fill="#1e3a8a"/>
+    <!-- Left wheel arch -->
+    <ellipse cx="-32" cy="14" rx="16" ry="8" fill="#060e2a"/>
+    <!-- Right wheel arch -->
+    <ellipse cx="32" cy="14" rx="16" ry="8" fill="#060e2a"/>
+  </g>
+</svg>
